@@ -13,8 +13,8 @@
 # limitations under the License.
 
 
-output "iap-ip" {
-  value = "${module.public-ip.ip-address}"
+output "ip" {
+  value = "${module.ip.address}"
 }
 
 #output "subnet" {

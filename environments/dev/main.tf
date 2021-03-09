@@ -21,8 +21,8 @@ provider "google" {
   project = "${var.project}"
 }
 
-module "public_ip" {
-  source  = "../../modules/public-ip"
+module "ip" {
+  source  = "../../modules/ip"
   project = "${var.project}"
   env     = "${local.env}"
 }
