@@ -14,7 +14,7 @@
 
 
 output "ip" {
-  value = "${module.ip.address}"
+  value = "${module.ip.ip}"
 }
 
 #output "subnet" {
