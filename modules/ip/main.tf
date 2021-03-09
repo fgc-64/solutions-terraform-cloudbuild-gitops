@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-resource "google_compute_address" "ip" {
+resource "google_compute_global_address" "ip" {
   name = "iap-ingress"
   network_tier = "PREMIUM"
 }
