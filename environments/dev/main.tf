@@ -27,14 +27,14 @@ module "http_server" {
   subnet  = "${module.vpc.subnet}"
 }
   
+module "firewall" {
+  source  = "../../modules/firewall"
+  project = "${var.project}"
+  subnet  = "${module.vpc.subnet}"
+}
+
 module "ip" {
   source  = "../../modules/ip"
   project = "${var.project}"
   env     = "${local.env}"
 }
-
-#module "firewall" {
-#  source  = "../../modules/firewall"
-#  project = "${var.project}"
-#  subnet  = "${module.vpc.subnet}"
-#}
