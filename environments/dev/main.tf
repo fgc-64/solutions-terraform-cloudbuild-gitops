@@ -18,10 +18,10 @@ locals {
 }
 
 provider "google" {
-  project = "${var.project}"
+  project = "var.project"
 }
 
 module "ip" {
   source  = "../../modules/ip"
-  project = "${var.project}"
+  project = "var.project"
 }
