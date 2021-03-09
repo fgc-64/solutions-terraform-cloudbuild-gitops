@@ -13,9 +13,9 @@
 # limitations under the License.
 
 
-#output "network" {
-#  value = "${module.vpc.network}"
-#}
+output "iap-ip" {
+  value = "${module.public-ip.ip-address}"
+}
 
 #output "subnet" {
 #  value = "${module.vpc.subnet}"
