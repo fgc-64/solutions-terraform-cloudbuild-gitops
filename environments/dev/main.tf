@@ -21,16 +21,16 @@ provider "google" {
   project = "${var.project}"
 }
 
-module "ip" {
-  source  = "../../modules/ip"
-  project = "${var.project}"
-  env     = "${local.env}"
-}
-
 module "http_server" {
   source  = "../../modules/http_server"
   project = "${var.project}"
   subnet  = "${module.vpc.subnet}"
+}
+  
+module "ip" {
+  source  = "../../modules/ip"
+  project = "${var.project}"
+  env     = "${local.env}"
 }
 
 #module "firewall" {
