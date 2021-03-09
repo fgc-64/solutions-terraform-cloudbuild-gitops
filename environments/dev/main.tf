@@ -21,8 +21,26 @@ provider "google" {
   project = "${var.project}"
 }
 
+<<<<<<< HEAD
+=======
+module "http_server" {
+  source  = "../../modules/http_server"
+  project = "${var.project}"
+  subnet  = "${module.vpc.subnet}"
+}
+  
+>>>>>>> bd4c5bf3692ab6f079394e4aff9e6d8706a11972
 module "ip" {
   source  = "../../modules/ip"
   project = "${var.project}"
   env     = "${local.env}"
 }
+<<<<<<< HEAD
+=======
+
+#module "firewall" {
+#  source  = "../../modules/firewall"
+#  project = "${var.project}"
+#  subnet  = "${module.vpc.subnet}"
+#}
+>>>>>>> bd4c5bf3692ab6f079394e4aff9e6d8706a11972
